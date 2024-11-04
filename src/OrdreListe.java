@@ -1,7 +1,10 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class OrdreListe {
-    private ArrayList<Bestilling> ordreListe; // Liste over alle aktive ordrer
+    private static ArrayList<Bestilling> ordreListe; // Liste over alle aktive ordrer
     private int ordrenummer; // Holder styr på næste ordrenummer, som tildeles automatisk
 
     // Konstruktør, der initialiserer ordrelisten og sætter start-ordrenummer til 1
@@ -43,4 +46,15 @@ public class OrdreListe {
             System.out.println(ordre); // Udskriver ordredetaljerne
         }
     }
+
+    // Metode til at lave en txt fil
+    public static void visStatus(){
+        try {
+            PrintStream status = new PrintStream(new File("status.txt"));
+            status.println(ordreListe);
+        } catch (FileNotFoundException e){
+            System.out.println("Filen blev ikke fundet");
+        }
+    }
+
 }

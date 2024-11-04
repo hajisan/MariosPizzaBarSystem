@@ -16,7 +16,7 @@ public class Main {
         int valg;  // Brugerens menuvalg
         Scanner scanner = new Scanner(System.in);  // Scanner til at læse brugerens input
 
-        // Do-while løkke, der fortsætter, indtil brugeren vælger at afslutte
+        // Do-while loop, der fortsætter, indtil brugeren vælger at afslutte
         do {
             // Udskriver menuen til brugeren
             System.out.println("""
@@ -60,6 +60,8 @@ public class Main {
                     break;
                 case 5:
                     // Generering af dags-rapport (kode mangler her)
+                    System.out.println("Dine ordrer bliver gemt i status.txt");
+                    OrdreListe.visStatus();
                     break;
                 case 6:
                     // Afslutter programmet
