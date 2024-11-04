@@ -47,7 +47,7 @@ public class OrdreListe {
         }
     }
 
-    // Metode til at lave en txt fil
+    // Metode til at lave en txt fil (Kan find pudses så formateringen i txt filen er overskuelig)
     public static void visStatus(){
         try {
             PrintStream status = new PrintStream(new File("status.txt"));

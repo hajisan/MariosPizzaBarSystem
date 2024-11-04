@@ -110,3 +110,6 @@ public class Bestilling {
                 " || " + "Afhentning kl: " + afhentningsTidspunkt + " || " + "Kunde: " + kundesNavn;
     }
 }
+
+
+// Hvis afhentningstidspunkt efterlades tom skrives der "Hurtigst muligt"
